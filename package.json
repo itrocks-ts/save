@@ -1,0 +1,59 @@
+{
+	"author": {
+		"name": "Baptiste Pillot",
+		"email": "baptiste@pillot.fr"
+	},
+	"dependencies": {
+		"@itrocks/action": "latest",
+		"@itrocks/action-request": "latest",
+		"@itrocks/auto-redirect": "latest",
+		"@itrocks/data-to-object": "latest",
+		"@itrocks/route": "latest",
+		"@itrocks/storage": "latest",
+		"@itrocks/ux-core": "latest"
+	},
+	"description": "Persist object data, processing input from HTML or JSON sources",
+	"devDependencies": {
+		"typescript": "~5.6"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"exports": "./cjs/save.js",
+	"homepage": "https://it.rocks",
+	"files": [
+		"LICENSE",
+		"README.md",
+		"cjs/*",
+		"routes.json",
+		"!*.map"
+	],
+	"keywords": [
+		"API",
+		"backend",
+		"component",
+		"data",
+		"generic",
+		"html",
+		"input",
+		"it.rocks",
+		"json",
+		"persist",
+		"persistence",
+		"save",
+		"standard",
+		"UI",
+		"UX"
+	],
+	"license": "ISC",
+	"name": "@itrocks/save",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itrocks-ts/save.git"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.json && cp src/*.html cjs/"
+	},
+	"types": "./cjs/save.d.ts",
+	"version": "0.0.1"
+}
