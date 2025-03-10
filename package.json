@@ -14,6 +14,7 @@
 	},
 	"description": "Persist object data, processing input from HTML or JSON sources",
 	"devDependencies": {
+		"sass": "^1.83",
 		"typescript": "~5.6"
 	},
 	"engines": {
@@ -25,6 +26,7 @@
 		"LICENSE",
 		"README.md",
 		"cjs/*",
+		"css/*",
 		"routes.json",
 		"!*.map"
 	],
@@ -52,8 +54,9 @@
 		"url": "git+https://github.com/itrocks-ts/save.git"
 	},
 	"scripts": {
-		"build": "tsc -p tsconfig.json && cp src/*.html cjs/"
+		"build": "tsc -p tsconfig.json && cp src/*.html cjs/ && npm run build:css",
+		"build:css": "sass --no-source-map src:css && cp src/*.svg css/"
 	},
 	"types": "./cjs/save.d.ts",
-	"version": "0.0.1"
+	"version": "0.0.2"
 }
