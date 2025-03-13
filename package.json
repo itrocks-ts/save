@@ -4,13 +4,8 @@
 		"email": "baptiste@pillot.fr"
 	},
 	"dependencies": {
-		"@itrocks/action": "latest",
-		"@itrocks/action-request": "latest",
-		"@itrocks/auto-redirect": "latest",
-		"@itrocks/data-to-object": "latest",
-		"@itrocks/route": "latest",
-		"@itrocks/storage": "latest",
-		"@itrocks/ux-core": "latest"
+		"@itrocks/action-pack": "latest",
+		"@itrocks/auto-redirect": "latest"
 	},
 	"description": "Persist object data, processing input from HTML or JSON sources",
 	"devDependencies": {
@@ -58,5 +53,5 @@
 		"build:css": "sass --no-source-map src:css && cp src/*.svg css/"
 	},
 	"types": "./cjs/save.d.ts",
-	"version": "0.0.2"
+	"version": "0.0.3"
 }
