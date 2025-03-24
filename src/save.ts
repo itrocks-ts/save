@@ -5,7 +5,7 @@ import { Route }        from '@itrocks/route'
 import { dataSource }   from '@itrocks/storage'
 
 @Route('/save')
-export default class Save extends Action
+export class Save extends Action
 {
 
 	async html(request: Request)
