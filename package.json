@@ -18,11 +18,11 @@
 	"exports": "./cjs/save.js",
 	"homepage": "https://it.rocks",
 	"files": [
+		"config.yaml",
 		"LICENSE",
 		"README.md",
 		"cjs/*",
 		"css/*",
-		"routes.json",
 		"!*.map"
 	],
 	"keywords": [
@@ -53,5 +53,5 @@
 		"build:css": "sass --no-source-map src:css && cp src/*.svg css/"
 	},
 	"types": "./cjs/save.d.ts",
-	"version": "0.0.5"
+	"version": "0.0.6"
 }
