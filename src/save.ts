@@ -5,10 +5,10 @@ import { Route }        from '@itrocks/route'
 import { dataSource }   from '@itrocks/storage'
 
 @Route('/save')
-export class Save extends Action
+export class Save<T extends object = object> extends Action<T>
 {
 
-	async html(request: Request)
+	async html(request: Request<T>)
 	{
 		const object = (await request.getObject()) ?? new request.type
 		await dataToObject(object, request.request.data)
@@ -16,7 +16,7 @@ export class Save extends Action
 		return this.htmlTemplateResponse(object, request, __dirname + '/save.html')
 	}
 
-	async json(request: Request)
+	async json(request: Request<T>)
 	{
 		const object = (await request.getObject()) ?? new request.type
 		await dataToObject(object, request.request.data)
