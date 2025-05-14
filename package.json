@@ -10,7 +10,7 @@
 	"description": "Persist object data, processing input from HTML or JSON sources",
 	"devDependencies": {
 		"sass": "^1.83",
-		"typescript": "~5.6"
+		"typescript": "~5.8"
 	},
 	"engines": {
 		"node": ">=18"
@@ -53,5 +53,5 @@
 		"build:css": "sass --no-source-map src:css && cp src/*.svg css/"
 	},
 	"types": "./cjs/save.d.ts",
-	"version": "0.0.8"
+	"version": "0.0.9"
 }
