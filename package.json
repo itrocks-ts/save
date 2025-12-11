@@ -26,10 +26,12 @@
 		"!*.map"
 	],
 	"keywords": [
+		"action",
 		"API",
 		"backend",
 		"component",
 		"data",
+		"form",
 		"generic",
 		"html",
 		"input",
@@ -37,6 +39,7 @@
 		"json",
 		"persist",
 		"persistence",
+		"REST",
 		"save",
 		"standard",
 		"UI",
@@ -53,5 +56,5 @@
 		"build:css": "sass --no-source-map src:css && cp src/*.svg css/"
 	},
 	"types": "./cjs/save.d.ts",
-	"version": "0.0.11"
+	"version": "0.0.12"
 }
