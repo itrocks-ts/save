@@ -8,17 +8,17 @@ import { dataSource }   from '@itrocks/storage'
 export class Save<T extends object = object> extends Action<T>
 {
 
-	async html(request: Request<T>)
+	async html(request: Request<T>, object?: T)
 	{
-		const object = (await request.getObject()) ?? new request.type
+		if (!object) object = await this.getObject(request)
 		await dataToObject(object, request.request.data)
 		await dataSource().save(object)
 		return this.htmlTemplateResponse(object, request, __dirname + '/save.html')
 	}
 
-	async json(request: Request<T>)
+	async json(request: Request<T>, object?: T)
 	{
-		const object = (await request.getObject()) ?? new request.type
+		if (!object) object = await this.getObject(request)
 		await dataToObject(object, request.request.data)
 		await dataSource().save(object)
 		return this.jsonResponse(object)
